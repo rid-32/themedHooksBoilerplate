@@ -5,7 +5,7 @@ import React from 'react'
 import 'stylesheets/styles'
 
 const Application = () => {
-  return <h3>Hello, Application</h3>
+  return <h1>Hello, Application</h1>
 }
 
 export default Application

@@ -17,11 +17,15 @@
     "parserOptions": {
       "ecmaVersion": "2018"
     },
-    "plugins": ["react", "eslint-plugin-cypress"],
+    "plugins": ["react", "react-hooks", "eslint-plugin-cypress"],
     "settings": {
       "react": {
         "version": "16.8.6"
       }
     },
-    "rules": {}
+    "rules": {
+      "react/prop-types": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "off"
+    }
 }

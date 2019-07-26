@@ -1,6 +1,6 @@
 export const fetchData = () =>
   new Promise(res => {
     setTimeout(() => {
-      res('Hello, world')
+      res({ data: 'Hello, world!' })
     }, 200)
   })

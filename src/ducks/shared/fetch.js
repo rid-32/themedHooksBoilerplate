@@ -47,12 +47,16 @@ export const getFetchActions = name => ({
 
 const mirrorData = data => data
 
+const getHandlerFrom = (initialHandler, alterHandler = mirrorData) =>
+  typeof initialHandler === 'function' ? initialHandler : alterHandler
+
 export const fetchData = config => async (dispatch, getState) => {
   const { name = true } = config
   const actions = getFetchActions(name)
-  const handleSuccess = config.handleSuccess || mirrorData
-  const handleError = config.handleError || mirrorData
-  const payload = config.selector ? config.selector(getState()) : null
+  const handleSuccess = getHandlerFrom(config.handleSuccess)
+  const handleError = getHandlerFrom(config.handleError)
+  const selector = getHandlerFrom(config.selector, () => {})
+  const payload = selector(getState())
   let response = {}
 
   try {

@@ -10,6 +10,7 @@
       "document": true,
       "localStorage": true,
       "CONFIG": true,
+      "process": true
     },
     "extends": ["eslint:recommended", "plugin:react/recommended", "eslint-config-prettier"],
     "parser": "babel-eslint",

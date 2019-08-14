@@ -3,7 +3,6 @@ const merge = require('webpack-merge')
 const common = require('./webpack.common')
 
 const plugins = [
-  new webpack.HotModuleReplacementPlugin(),
   new webpack.DefinePlugin({
     'process.env.DEVELOPMENT': true,
   }),
@@ -26,8 +25,8 @@ module.exports = merge.smart(
       historyApiFallback: true,
       host: '0.0.0.0',
       port: 3000,
-      hot: true,
       compress: true,
+      hot: true,
     },
   },
   common,

@@ -1,0 +1,14 @@
+@import '~stylesheets/themes.scss';
+
+.counter {
+  @include themify {
+    color: themed('counter-color');
+  }
+
+  &__control {
+    @include themify {
+      color: themed('counter-controller-color');
+      background-color: themed('counter-controller-bg');
+    }
+  }
+}

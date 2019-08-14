@@ -1,7 +1,15 @@
-html {
-  /* Breakpoints */
-  --screenXs: 480px;
-  --screenSm: 768px;
-  --screenMd: 992px;
-  --screenLg: 1200px;
-}
+/* Breakpoints */
+$screenXs: 480px;
+$screenSm: 768px;
+$screenMd: 992px;
+$screenLg: 1200px;
+
+/* Colors */
+$white: #fff;
+$black: #000;
+$red: #f00;
+$green: #0f0;
+$grey: grey;
+
+/* Checkboxes */
+$counter-color: $red;

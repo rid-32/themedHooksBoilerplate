@@ -1,1 +1,7 @@
-// for other themes set up data-attribute to the html-tag: html[data-theme="theme-name"]
+@import '../settings.scss';
+
+$default: (
+  counter-color: $black,
+  counter-controller-color: $black,
+  counter-controller-bg: $white,
+);
